@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santiago Cuda — Developer</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Google Fonts: Rajdhani para títulos + Outfit para cuerpo -->
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- =====================================================
+       NAV LATERAL: íconos fijos a la derecha
+       Mejora futura: marcar ícono activo con IntersectionObserver
+  ====================================================== -->
+  <nav class="nav-lateral" aria-label="Navegación principal">
+    <a href="#inicio"      class="nav-ico" aria-label="Inicio">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    </a>
+    <a href="#sobre-mi"    class="nav-ico" aria-label="Sobre mí">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+    </a>
+    <a href="#tarjetas"    class="nav-ico" aria-label="Proyectos">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg>
+    </a>
+    <a href="#contacto"    class="nav-ico" aria-label="Contacto">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </a>
+  </nav>
+
+  <!-- =====================================================
+       HEADER: imagen grande a la izquierda, datos a la derecha
+  ====================================================== -->
+  <header id="inicio">
+    <div class="bg-pattern" aria-hidden="true"></div>
+
+    <div class="hero-wrap">
+      <!-- Foto grande -->
+      <div class="hero-foto-col">
+        <img src="img/perfil.jpg" alt="Foto de Santiago Cuda" class="hero-foto" />
+      </div>
+
+      <!-- Datos -->
+      <div class="hero-data">
+        <h1 class="hero-nombre">SANTIAGO CUDA</h1>
+        <p class="hero-rol">DEVELOPER</p>
+        <div class="hero-redes">
+          <a href="https://github.com/SantiCuda" target="_blank" rel="noopener" aria-label="GitHub" class="red">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/santiagocuda/" target="_blank" rel="noopener" aria-label="LinkedIn" class="red">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://wa.me/541151204516" target="_blank" rel="noopener" aria-label="WhatsApp" class="red">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+        <a href="#contacto" class="btn-acento">CONTACTO</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =====================================================
+         SOBRE MÍ: presentación personal
+         Mejora futura: animar contadores de stats al entrar en viewport
+    ====================================================== -->
+    <section id="sobre-mi">
+      <div class="bg-pattern" aria-hidden="true"></div>
+      <div class="sec-wrap">
+        <div class="sobre-card">
+          <h2 class="sec-titulo">SOBRE MÍ</h2>
+          <h3 class="sec-nombre">SANTIAGO CUDA</h3>
+          <div class="sobre-redes">
+            <a href="https://github.com/SantiCuda"           target="_blank" rel="noopener" aria-label="GitHub"    class="red"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+            <a href="https://www.linkedin.com/in/santiagocuda/" target="_blank" rel="noopener" aria-label="LinkedIn"  class="red"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
+            <a href="https://wa.me/541151204516"              target="_blank" rel="noopener" aria-label="WhatsApp"  class="red"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+            <a href="mailto:santiagoacuda@gmail.com"           aria-label="Email" class="red"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+          </div>
+          <p class="sobre-bio">
+            Profesional IT con más de 3 años de experiencia en soporte técnico, desarrollo de software y análisis de sistemas.
+            Manejo de entornos Windows y Linux, administración de bases de datos SQL y lenguajes como JavaScript, C# y PHP.
+            Me destaco por la capacidad de adaptarme rápido a nuevos desafíos y por un enfoque práctico para resolver problemas en equipo.
+          </p>
+          <a href="cv_santiago_cuda.pdf" download class="btn-acento">Descargar CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         HABILIDADES: stack técnico con tabla
+         Mejora futura: barras de progreso animadas por skill
+    ====================================================== -->
+    <section id="habilidades">
+      <div class="bg-pattern" aria-hidden="true"></div>
+      <div class="sec-wrap">
+        <h2 class="sec-titulo">HABILIDADES</h2>
+
+        <div class="habs-grid">
+          <div class="hab-col">
+            <h3 class="hab-h">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+              Lenguajes &amp; Bases de datos
+            </h3>
+            <ul class="hab-lista">
+              <li><span class="hab-dot"></span>HTML &amp; CSS</li>
+              <li><span class="hab-dot"></span>JavaScript</li>
+              <li><span class="hab-dot"></span>C# / C / C++</li>
+              <li><span class="hab-dot"></span>PHP</li>
+              <li><span class="hab-dot"></span>MySQL / SQL</li>
+            </ul>
+          </div>
+          <div class="hab-col">
+            <h3 class="hab-h">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14z"/></svg>
+              Sistemas &amp; Herramientas
+            </h3>
+            <ul class="hab-lista aprender">
+              <li><span class="hab-dot"></span>Linux / Windows</li>
+              <li><span class="hab-dot"></span>Git &amp; GitHub</li>
+              <li><span class="hab-dot"></span>Azure DevOps</li>
+              <li><span class="hab-dot"></span>Jira / SCRUM</li>
+              <li><span class="hab-dot"></span>Figma / Visio</li>
+            </ul>
+          </div>
+          <div class="hab-col">
+            <h3 class="hab-h">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6L23 9zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+              Estoy aprendiendo
+            </h3>
+            <ul class="hab-lista hobbies">
+              <li><span class="hab-dot"></span>React</li>
+              <li><span class="hab-dot"></span>TypeScript</li>
+              <li><span class="hab-dot"></span>Node.js</li>
+              <li><span class="hab-dot"></span>Docker</li>
+            </ul>
+          </div>
+        </div>
+
+        <table class="tabla">
+          <thead>
+            <tr>
+              <th>Tecnología</th>
+              <th>Nivel</th>
+              <th>Experiencia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>HTML &amp; CSS</td><td><span class="pill pill-v">Avanzado</span></td><td>3+ años</td></tr>
+            <tr><td>JavaScript</td>   <td><span class="pill pill-v">Avanzado</span></td><td>3+ años</td></tr>
+            <tr><td>C# / SQL</td>     <td><span class="pill pill-a">Intermedio</span></td><td>3 años</td></tr>
+            <tr><td>Git</td>          <td><span class="pill pill-a">Intermedio</span></td><td>3 años</td></tr>
+            <tr><td>React</td>        <td><span class="pill pill-g">Básico</span></td><td>En curso</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         TARJETAS / PROYECTOS: repos reales de GitHub
+         Mejora futura: cargar repos dinámicamente desde la GitHub API
+    ====================================================== -->
+    <section id="tarjetas">
+      <div class="bg-pattern" aria-hidden="true"></div>
+      <div class="sec-wrap">
+        <h2 class="sec-titulo">PROYECTOS</h2>
+
+        <div class="cards-grid">
+
+          <article class="card">
+            <div class="card-img">
+              <img src="https://api.microlink.io/?url=https://santicuda.github.io/argentina-programa-trabajo-integrador/&screenshot=true&meta=false&embed=screenshot.url" alt="Captura del proyecto Argentina Programa 4.0" loading="lazy" />
+              <div class="card-overlay">
+                <a href="https://santicuda.github.io/argentina-programa-trabajo-integrador/" target="_blank" rel="noopener" class="btn-acento btn-sm">Ver demo</a>
+                <a href="https://github.com/SantiCuda/argentina-programa-trabajo-final" target="_blank" rel="noopener" class="btn-ghost btn-sm">GitHub</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="ctag">HTML</span><span class="ctag">CSS</span><span class="ctag">Bootstrap</span>
+              </div>
+              <h3>Argentina Programa 4.0</h3>
+              <p>Landing page empresarial con Bootstrap, generación de PDF y formulario tipo wizard. Proyecto final del programa.</p>
+              <div class="card-links">
+                <a href="https://santicuda.github.io/argentina-programa-trabajo-integrador/" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Ver demo
+                </a>
+                <a href="https://github.com/SantiCuda/argentina-programa-trabajo-final" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img src="https://api.microlink.io/?url=https://santicuda.github.io/sign-up-form/&screenshot=true&meta=false&embed=screenshot.url" alt="Captura del proyecto Video Game Sign-up Form" loading="lazy" />
+              <div class="card-overlay">
+                <a href="https://santicuda.github.io/sign-up-form/" target="_blank" rel="noopener" class="btn-acento btn-sm">Ver demo</a>
+                <a href="https://github.com/SantiCuda/sign-up-form" target="_blank" rel="noopener" class="btn-ghost btn-sm">GitHub</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="ctag">HTML</span><span class="ctag">CSS</span><span class="ctag">JavaScript</span>
+              </div>
+              <h3>Video Game Sign-up Form</h3>
+              <p>Formulario de registro para un videojuego con validaciones en JavaScript y diseño personalizado.</p>
+              <div class="card-links">
+                <a href="https://santicuda.github.io/sign-up-form/" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Ver demo
+                </a>
+                <a href="https://github.com/SantiCuda/sign-up-form" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img src="https://api.microlink.io/?url=https://santicuda.github.io/odin-calculator/&screenshot=true&meta=false&embed=screenshot.url" alt="Captura del proyecto JavaScript Calculator" loading="lazy" />
+              <div class="card-overlay">
+                <a href="https://santicuda.github.io/odin-calculator/" target="_blank" rel="noopener" class="btn-acento btn-sm">Ver demo</a>
+                <a href="https://github.com/SantiCuda/odin-calculator" target="_blank" rel="noopener" class="btn-ghost btn-sm">GitHub</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="ctag">JavaScript</span><span class="ctag">HTML</span><span class="ctag">CSS</span>
+              </div>
+              <h3>JavaScript Calculator</h3>
+              <p>Calculadora funcional construida con JavaScript puro. Operaciones básicas y avanzadas con interfaz limpia.</p>
+              <div class="card-links">
+                <a href="https://santicuda.github.io/odin-calculator/" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Ver demo
+                </a>
+                <a href="https://github.com/SantiCuda/odin-calculator" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img src="https://api.microlink.io/?url=https://santicuda.github.io/etchASketch/&screenshot=true&meta=false&embed=screenshot.url" alt="Captura del proyecto Etch-a-Sketch" loading="lazy" />
+              <div class="card-overlay">
+                <a href="https://santicuda.github.io/etchASketch/" target="_blank" rel="noopener" class="btn-acento btn-sm">Ver demo</a>
+                <a href="https://github.com/SantiCuda/etchASketch" target="_blank" rel="noopener" class="btn-ghost btn-sm">GitHub</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="ctag">HTML</span><span class="ctag">CSS</span><span class="ctag">JavaScript</span>
+              </div>
+              <h3>Etch-a-Sketch</h3>
+              <p>Juguete de dibujo interactivo creado con HTML, CSS y JavaScript. Grilla dinámica y paleta de colores personalizable.</p>
+              <div class="card-links">
+                <a href="https://santicuda.github.io/etchASketch/" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Ver demo
+                </a>
+                <a href="https://github.com/SantiCuda/etchASketch" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img src="https://api.microlink.io/?url=https://santicuda.github.io/rock-paper-scissors/&screenshot=true&meta=false&embed=screenshot.url" alt="Captura del proyecto Rock Paper Scissors" loading="lazy" />
+              <div class="card-overlay">
+                <a href="https://santicuda.github.io/rock-paper-scissors/" target="_blank" rel="noopener" class="btn-acento btn-sm">Ver demo</a>
+                <a href="https://github.com/SantiCuda/rock-paper-scissors" target="_blank" rel="noopener" class="btn-ghost btn-sm">GitHub</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="ctag">JavaScript</span><span class="ctag">HTML</span><span class="ctag">CSS</span>
+              </div>
+              <h3>Rock Paper Scissors</h3>
+              <p>El clásico juego piedra, papel o tijera implementado con HTML, CSS y JavaScript con lógica de puntuación.</p>
+              <div class="card-links">
+                <a href="https://santicuda.github.io/rock-paper-scissors/" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Ver demo
+                </a>
+                <a href="https://github.com/SantiCuda/rock-paper-scissors" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img">
+              <img src="https://api.microlink.io/?url=https://santicuda.github.io/landing-page/&screenshot=true&meta=false&embed=screenshot.url" alt="Captura del proyecto Generic Store Landing Page" loading="lazy" />
+              <div class="card-overlay">
+                <a href="https://santicuda.github.io/landing-page/" target="_blank" rel="noopener" class="btn-acento btn-sm">Ver demo</a>
+                <a href="https://github.com/SantiCuda/landing-page" target="_blank" rel="noopener" class="btn-ghost btn-sm">GitHub</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="ctag">HTML</span><span class="ctag">CSS</span>
+              </div>
+              <h3>Generic Store Landing Page</h3>
+              <p>Template de landing page para tienda genérica. Diseño limpio y moderno con secciones de productos y contacto.</p>
+              <div class="card-links">
+                <a href="https://santicuda.github.io/landing-page/" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Ver demo
+                </a>
+                <a href="https://github.com/SantiCuda/landing-page" target="_blank" rel="noopener" class="card-repo-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="ver-mas-wrap">
+          <a href="https://github.com/SantiCuda" target="_blank" rel="noopener" class="btn-acento">Ver todos en GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACTO: formulario + datos reales
+    ====================================================== -->
+    <section id="contacto">
+      <div class="bg-pattern" aria-hidden="true"></div>
+      <div class="sec-wrap">
+        <h2 class="sec-titulo">CONTACTO</h2>
+        <p class="contacto-sub">¡Escribime para lo que necesites!</p>
+        <p class="contacto-mail">O mandame un mail a <a href="mailto:santiagoacuda@gmail.com">santiagoacuda@gmail.com</a></p>
+
+        <form class="form" onsubmit="return false;">
+          <div class="form-row">
+            <div class="field">
+              <input type="text"  name="nombre"   placeholder="Nombre"   required />
+            </div>
+            <div class="field">
+              <input type="text"  name="apellido" placeholder="Apellido" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <input type="email" name="email"    placeholder="Email"    required />
+            </div>
+            <div class="field">
+              <input type="tel"   name="telefono" placeholder="Teléfono" />
+            </div>
+          </div>
+          <div class="field">
+            <textarea name="mensaje" rows="5" placeholder="Mensaje"></textarea>
+          </div>
+          <button type="submit" class="btn-acento btn-full">Enviar Mensaje</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PELÍCULAS: top 3 favoritas
+         Mejora futura: conectar con TMDB API para ratings dinámicos
+    ====================================================== -->
+    <section id="peliculas">
+      <div class="bg-pattern" aria-hidden="true"></div>
+      <div class="sec-wrap">
+        <h2 class="sec-titulo">MIS PELÍCULAS FAVORITAS</h2>
+
+        <div class="pel-grid">
+          <div class="pel-card">
+            <span class="pel-num">01</span>
+            <div class="pel-img">
+              <img src="https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" alt="Póster de The Matrix" />
+            </div>
+            <div class="pel-body">
+              <h3>The Matrix</h3>
+              <span class="pel-year">1999</span>
+              <p>Una obra maestra que redefinió la ciencia ficción. Filosóficamente profunda y visualmente revolucionaria.</p>
+              <div class="pel-tags">
+                <span class="ctag">Sci-Fi</span><span class="ctag">Acción</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pel-card">
+            <span class="pel-num">02</span>
+            <div class="pel-img">
+              <img src="https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg" alt="Póster de Interstellar" />
+            </div>
+            <div class="pel-body">
+              <h3>Interstellar</h3>
+              <span class="pel-year">2014</span>
+              <p>Nolan combina física real con emoción humana de manera magistral. La banda sonora de Zimmer es perfecta.</p>
+              <div class="pel-tags">
+                <span class="ctag">Sci-Fi</span><span class="ctag">Drama</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pel-card">
+            <span class="pel-num">03</span>
+            <div class="pel-img">
+              <img src="https://image.tmdb.org/t/p/w500/eEslKSwcqmiNS6va24Pbxf2UKmJ.jpg" alt="Póster de El Padrino" />
+            </div>
+            <div class="pel-body">
+              <h3>El Padrino</h3>
+              <span class="pel-year">1972</span>
+              <p>El mejor drama criminal jamás filmado. Brando y Pacino en sus roles definitivos.</p>
+              <div class="pel-tags">
+                <span class="ctag">Drama</span><span class="ctag">Crimen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-izq">
+        <h3>SANTIAGO CUDA</h3>
+        <p>Developer</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#tarjetas">Proyectos</a>
+        <a href="#habilidades">Skills</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer-redes">
+        <a href="https://github.com/SantiCuda"           target="_blank" rel="noopener" aria-label="GitHub"   class="red"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+        <a href="https://www.linkedin.com/in/santiagocuda/" target="_blank" rel="noopener" aria-label="LinkedIn" class="red"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
+        <a href="mailto:santiagoacuda@gmail.com"           aria-label="Email"    class="red"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 Santiago Cuda — Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón volver al inicio -->
+  <a href="#inicio" class="back-to-top" id="backToTop" aria-label="Volver al inicio">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="22" height="22">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </a>
+
+  <script>
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav-lateral').classList.toggle('scrolled', window.scrollY > 100);
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    /* Animate on scroll */
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.card, .pel-card, .hab-col').forEach(el => {
+      el.classList.add('reveal'); io.observe(el);
+    });
+  </script>
+
+</body>
+</html>
