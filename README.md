@@ -4,7 +4,7 @@
 
 Este es el **Trabajo Práctico N°1 (PFO1)** de la materia. Se trata de una Landing Page de Portafolio Personal desarrollada íntegramente con **HTML5 y CSS3 puro**, sin frameworks de JavaScript. El sitio presenta mi perfil como desarrollador, mis proyectos reales publicados en GitHub, mis habilidades técnicas, un formulario de contacto y mis películas favoritas.
 
-**URL del sitio publicado:** `[COMPLETAR CON TU URL DE GITHUB PAGES]`
+**URL del sitio publicado:** `https://santicuda.github.io/portfolio/`
 
 ---
 
